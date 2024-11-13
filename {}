@@ -1,0 +1,85 @@
+IP Address:  192.145.63.0
+Class: C
+Subnet mask: 255.255.255.0
+CIDR Range: 192.145.63.0/24
+
+Decimal to binary conversion
+-----------------------------
+Convert 192.145.63.0 to binary
+
+number -> 2           8       6
+          \hundreds  \tens   \ones
+
+          6 * 1  =  6       -> 1   = 10^0
+          8 * 10 =  80      -> 10  = 10^1
+          2 * 100 = 200 +   -> 100 = 10^2
+          ------------------
+                    286
+
+Binary ^s of 2
+-----------------
+2^0 = 1
+2^1 = 2
+2^2 = 4
+2^3 = 8
+2^4 = 16
+2^5 = 32
+2^6 = 64
+2^7 = 128 +
+---------------
+      255
+
+
+   Decimal to binary ==>   192.145.63.0 = 11000000.10010001.00111111.00000000
+
+
+   128  64  32  16  8  4  2  1
+
+   Binary to Decimal ==> 11000000.10010001.00111111.00000000 = 192.145.63.0
+
+Subnetting
+----------------
+- Create subnets
+
+Process of creating  a subnets
+---------------------------
+- Given a network
+- Identify the class of the network
+- Subnet mask
+- CIDR range
+- Convert the network into binary
+- How many subnets you need to Create
+
+-----------------------------------------------
+Network = 192.168.75.0, Create 4 subnets
+-----------------------------------------------
+Class = C
+Subnet Mask = 255.255.255.0
+CIDR range = 192.168.75.0/24
+Binary = 11000000.10101000.01001011.00000000
+Convert into binary
+
+128  64  32  16  8  4  2  1
+
+Creating 4 subnets
+------------------
+No. of subnets = 2^n, n = no of bits from the host portion of the IP
+
+4 = 2^2
+
+Updated binary notation = 11000000.10101000.01001011.11000000
+
+No of available hosts = 2^n - 2 = 64 - 2 = 62 
+
+New subnet mask = 255.255.255.192
+New CIDR range = 192.168.75.0/26
+
+Our subnets
+------------------
+1. 192.168.75.0 - 192.168.75.63
+2. 192.168.75.64 - 192.168.75.127
+3. 192.168.75.128 - 192.168.75.191
+4. 192.168.75.192 - 192.168.75.255
+
+
+Exercise: Create 12, 5 subnets from 192.168.75.0

@@ -1,0 +1,3 @@
+#! /usr/bin/bash
+
+echo "Blackout in our area"
